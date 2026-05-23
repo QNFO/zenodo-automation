@@ -88,7 +88,7 @@ def upload_file(deposition_id, file_path, token, base_url):
     try:
         with urllib.request.urlopen(req, timeout=120) as resp:
             result = json.loads(resp.read().decode("utf-8"))
-            print(f"  ✓ Uploaded: {result.get('key', filename)}")
+            print(f"  [OK] Uploaded: {result.get('key', filename)}")
             return result
     except urllib.error.HTTPError as e:
         error_body = e.read().decode("utf-8") if e.fp else ""
@@ -113,7 +113,7 @@ def update_metadata(deposition_id, metadata, token, base_url):
     data = {"metadata": metadata}
     result = api_request("PUT", url, token, data=data)
     if result:
-        print(f"  ✓ Metadata updated")
+        print(f"  [OK] Metadata updated")
         return result
     return None
 
@@ -124,7 +124,7 @@ def publish_deposition(deposition_id, token, base_url):
     result = api_request("POST", url, token)
     if result:
         doi = result.get("doi", "UNKNOWN")
-        print(f"  ✓ Published! DOI: {doi}")
+        print(f"  [OK] Published! DOI: {doi}")
         return result
     return None
 
