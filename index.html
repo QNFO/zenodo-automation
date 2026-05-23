@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zenodo Automation — One-Command DOI Pipeline</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#0A1128;color:#E5E5E5;font-family:system-ui,sans-serif;min-height:100vh}
+header{background:linear-gradient(135deg,#1a1a2e,#16213e);padding:2rem;text-align:center;border-bottom:2px solid #2a2a4a}
+header h1{font-size:1.8rem;color:#e0e0f0;margin-bottom:.5rem}
+header p{color:#8888aa;max-width:700px;margin:0 auto}
+main{max-width:900px;margin:0 auto;padding:1.5rem}
+.card{background:#15152a;border:1px solid #2a2a4a;border-radius:8px;padding:1.5rem;margin-bottom:1.5rem}
+.card h2{color:#aaaadd;font-size:1.1rem;margin-bottom:.8rem}
+.card p{color:#9999bb;font-size:.9rem;line-height:1.6}
+code{background:#1a1a33;color:#88ccdd;padding:.15rem .4rem;border-radius:3px;font-size:.85rem}
+pre{background:#0d0d1a;border:1px solid #2a2a4a;border-radius:6px;padding:1rem;overflow-x:auto;font-size:.8rem;color:#aaccee}
+.status{display:inline-block;padding:.2rem .6rem;border-radius:3px;font-size:.7rem;font-weight:600}
+.status-ok{background:#1a3a1a;color:#88dd88}
+.status-pending{background:#3a2a1a;color:#ddaa88}
+.status-error{background:#3a1a1a;color:#dd8888}
+footer{text-align:center;padding:1.5rem;color:#555577;font-size:.7rem;border-top:1px solid #2a2a4a;margin-top:2rem}
+footer a{color:#818CF8;margin:0 .4rem;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+<h1>Zenodo Automation Pipeline</h1>
+<p>One command to register a DOI. No browser. No manual upload. No waiting.</p>
+</header>
+<main>
+<div class="card">
+<h2>Quick Start</h2>
+<pre>python zenodo_publish.py --token $(cat ~/.zenodo_token) --title "Paper Title" --author "Name" --file "paper.md"</pre>
+<p>Creates a Zenodo deposition, sets metadata, uploads the file, and publishes — returning a real <code>10.5281/zenodo.XXXXXXXX</code> DOI.</p>
+</div>
+
+<div class="card">
+<h2>Pipeline Status</h2>
+<p><span class="status status-ok">Sandbox</span> Tested — deposit 161914 created, file uploaded, metadata verified.</p>
+<p><span class="status status-pending">Production</span> Token validated. Server 500 errors — retry when Zenodo API recovers.</p>
+<p><span class="status status-ok">Token</span> Stored at <code>%USERPROFILE%\.zenodo_token</code> — persists across sessions.</p>
+<p><span class="status status-ok">Template</span> Registered as <code>ZENODO-PUBLISH</code> — callable from any QWAV agent.</p>
+</div>
+
+<div class="card">
+<h2>Features</h2>
+<p>Zero dependencies (Python stdlib only). Supports sandbox testing (<code>--sandbox</code> flag), full metadata (title, author, ORCID, abstract, keywords, license), versioning (update existing DOIs with <code>--doi</code>), and file upload with progress.</p>
+</div>
+
+<div class="card">
+<h2>Source</h2>
+<p><code>zenodo_publish.py</code> — 278 lines, self-contained. MIT licensed. Part of <a href="https://qnfo.github.io/QWAV/" style="color:#818CF8">QWAV</a>.</p>
+</div>
+</main>
+<footer>
+<a href="https://qnfo.github.io/QWAV/">QWAV Hub</a> ·
+<a href="https://github.com/QNFO/zenodo-automation">GitHub</a>
+</footer>
+</body>
+</html>
