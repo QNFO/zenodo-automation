@@ -1,15 +1,17 @@
-# SPRINT TRACKER -- zenodo-automation
+# ⚠️ DEPRECATED -- Migrated to GitHub-Native Features
 
-## Sprint 1: Scaffold & Deploy (2026-05-23)
+**This file is superseded by GitHub-native project management tools.**
 
-| ID | Task | Est. | Status |
-|:---|:-----|:-----|:-------|
-| S1.1 | Scaffold project (README, index.html, zenodo_publish.py) | 0.25h | [x] |
-| S1.2 | Copy zenodo_publish.py to prompts/zenodo/ | 0.1h | [x] |
-| S1.3 | Create GitHub repo + enable Pages | 0.25h | [x] |
-| S1.4 | Write test plan (test_plan.py) | 0.5h | [x] |
-| S1.5 | Sandbox validation (deposit 161914) | 0.25h | [x] |
-| S1.6 | Cross-link to all QWAV artifacts | 0.5h | [ ] |
-| S1.7 | Production Zenodo publishing | 0.5h | [!] API 500 |
+All QNFO repos now use GitHub-native features for project management:
+- **Wiki** for persistent documentation (charter, learnings, DoD, state)
+- **Issues** for backlog, risks, and tasks with priority labels
+- **Projects** for sprint/kanban tracking
+- **Discussions** for decisions and announcements
+- **Releases** for versioned changelogs
 
-## Next: S1.6 → S1.7: Cross-link artifacts, retry production
+See the [QWAV Wiki](https://github.com/QNFO/QWAV/wiki) for the reference implementation.
+See the [QNFO org Projects](https://github.com/orgs/QNFO/projects) for cross-project tracking.
+
+**This file will not be updated. Do not edit.**
+
+*Migrated 2026-05-24 during org-wide PM file deprecation.*
