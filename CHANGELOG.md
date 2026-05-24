@@ -1,23 +1,17 @@
-# CHANGELOG -- zenodo-automation
+# ⚠️ DEPRECATED -- Migrated to GitHub-Native Features
 
-## v1.0 — 2026-05-23 — Project Complete
+**This file is superseded by GitHub-native project management tools.**
 
-**What Changed:**
-- Scaffolded project — README.md, index.html, zenodo_publish.py
-- Copied zenodo_publish.py from ultrametric-tree-universality
-- Created interactive pipeline status dashboard (index.html)
-- Written test plan — 22/22 PASS
-- Copied to prompts/zenodo/ for cross-project reuse
-- Registered ZENODO-PUBLISH prompt template
-- Created GitHub repo + enabled Pages at qnfo.github.io/zenodo-automation/
-- Sandbox integration test published (deposit 161914, record 162230)
-- Cross-linked to all 4 QWAV artifact repos
-- Added to technical site as tool card
+All QNFO repos now use GitHub-native features for project management:
+- **Wiki** for persistent documentation (charter, learnings, DoD, state)
+- **Issues** for backlog, risks, and tasks with priority labels
+- **Projects** for sprint/kanban tracking
+- **Discussions** for decisions and announcements
+- **Releases** for versioned changelogs
 
-**Files:** 6 files, 3 commits on main
-**Live:** https://qnfo.github.io/zenodo-automation/
-**Tests:** 22/22 PASS
+See the [QWAV Wiki](https://github.com/QNFO/QWAV/wiki) for the reference implementation.
+See the [QNFO org Projects](https://github.com/orgs/QNFO/projects) for cross-project tracking.
 
-**Known Issues:**
-- Production Zenodo publishing blocked on API 500 (server-side)
-- Token stored; retry when API recovers
+**This file will not be updated. Do not edit.**
+
+*Migrated 2026-05-24 during org-wide PM file deprecation.*
